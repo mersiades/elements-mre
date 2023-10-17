@@ -41,8 +41,23 @@ export default function RootLayout() {
   return <RootLayoutNav />;
 }
 
+
+
 function RootLayoutNav() {
-  const theme = createTheme({ foo: 'bar'})
+  const theme = createTheme({
+    foo: 'bar',
+    mode: 'light',
+    lightColors: {
+      tertiary: '#124789',
+      accent: '#f98652',
+      surface: '#0990763',
+    },
+    darkColors: {
+      tertiary: '#124789',
+      accent: '#908652',
+      surface: '#0990763',
+    },
+  })
 
   return (
     <ThemeProvider theme={theme}>
